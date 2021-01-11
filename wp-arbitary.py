@@ -1,18 +1,8 @@
-# Exploit Title: WordPress Plugin Adning Advertising 1.5.5 - Arbitrary File Upload
-# Google Dork: inurl:/wp-content/plugins/angwp
-# Date: 23/12/2020
-# Exploit Author: bilal
-# Tested on: Linux parrot amd64
-
 import os.path
 from os import path
 import json
 import requests;
 import sys
-
-def print_banner():
-	print("Adning Advertising < 1.5.6 - Arbitrary File Upload")
-	print("Author -> space_hen (bilal vm)")
 
 def print_usage():
 	print("Usage: python3 exploit.py [target url] [php file]")
