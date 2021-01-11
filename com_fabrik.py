@@ -25,7 +25,7 @@ def banner():
  |_____/|_| |_|\___|_|_|  \____/| .__/|_|\___/ \__,_|\__,_|
                                 | |                        
                                 |_|                        
-\tFanpage: www.facebook.com/reldsec | www.reldsec.org
+
 		""")
 
 def repair_url_add(url):
@@ -87,7 +87,7 @@ def main():
 		verify(url)
 		exploit(url)
 	else:
-		print('[x] Aku nak matlamat hanat')
+		print('[x] Aku nak list kau hanat')
 if __name__ == '__main__':
 	try:
 		main()
