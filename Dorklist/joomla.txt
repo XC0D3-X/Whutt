@@ -1,0 +1,37 @@
+intitle:"Joomla – Web Installer"
+intitle:"Index of /" "joomla_update.php"
+"Consola de Joomla! Debug" inurl:index.php
+"Joomla! Administration Login" inurl:"/index.php"
+"powered by joomla 3.2" OR "powered by joomla 3.3" OR "powered by joomla 3.4"
+inurl:~~joomla3.txt filetype:txt
+intext:"~~Joomla1.txt" title:"Index of /"
+inurl:"index.php?option=com_bookjoomlas"
+index2.php?option=com_joomlaboard
+com_ijoomla_rss
+inurl:index.php?option=com_joomlaconnect_be
+inurl:"com_ijoomla_archive"
+inurl:com_joomradio
+inurl:"com_joomlaradiov5"
+"com_joomlaflashfun"
+"com_joom12pic"
+inurl:index.php?option=com_joomradio
+inurl:com_joomladate
+"index.php?option=com_news_portal" or "Powered by iJoomla News Portal"
+Joomla Component com_eportfolio Upload Vulnerability
+intitle:"Joomla - Web Installer"
+inurl:index.php/using/joomla site:com
+inurl:index.php/using-joomla/extensions/components/content-component/article-category-list/50-upgraders
+inurl:index.php/using-joomla/extensions/components/content-component/article-categories/28-park-site/photo-gallery
+inurl:index.php/using-joomla/parameters/26-sample-data-articles/park-site
+Inurl:index.php/plugins site:com
+Inurl:index.php/rss=feed site:com
+inurl:index.php/joomla/content/category-blog/24-joomla site:com
+inurl:index.php/using-joomla/extensions/components/content-component/article-categories/84-gd-articles site:
+inurl:Home Page Beez joomla 1.6 index.php using-joomla
+inurl:index.php joomla! 1.7 – open source content management site:
+inurl:index.php/using-joomla/extension/components/content-component/article-category-list/50-upgraders site:com intext:joomla! 1.7 – open source content management site:jp
+inurl:index.php/19-sample-data-articles/joomla/50-upgraders site:id inurl:index.php/using-joomla/extensions/templates/beez-2/home-page-beez-2 site:as
+inurl:index.php/19-sample-data-articles/joomla site:com
+inurl:Home Page Beez5 joomla 1.6 index.php/using-joomla/extensions/components/users-component/registration-form site:br site:com
+inurl:index.php/using-joomla/extensions/templates/beez5/home-page-beez5
+inurl:index.php/using-joomla/extensions/components/content-component/article-category-list/24-joomla
