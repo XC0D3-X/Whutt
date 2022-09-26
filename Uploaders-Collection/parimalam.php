@@ -2,25 +2,22 @@
 <html lang="en">
     <title>Supp Bruhh?</title>
 <head>
-
+		<link rel="shortcut icon" href="http://amritresort.in/tikus.gif"> 
         <link rel="icon" type="image/png" href="https://mambang-edge.dragonforce.io/data/assets/logo/32x32-01.png" sizes="32x32" />
         <link rel="apple-touch-icon" href="https://mambang-edge.dragonforce.io/data/assets/logo/maskable_icon_x192.png">
         <meta property="og:site_name" content="Dragon Force Malaysia" />
         <meta property="og:title" content="Pari Malam" />
         <meta property="og:description" content="w00t! w00t!">  
-        <meta property="og:image" content="https://cancerinfotw.org/images/tikus-1.gif.mp4">
+        <meta property="og:image" content="http://amritresort.in/tikus.gif">
         <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
         <meta name="keywords" content="DragonForce Malaysia" />
         <meta name="author" content="Pari Malam" />
-        <meta name='rating' content='general' />
-        <meta name='geo.country' content='id' />
-        <meta name='geo.placename' content='Malaysia' />
-        <meta name='robots' content='all'/>
-        <meta name='robots' content='index, follow' />
-        <meta name='robots schedule' content='auto'/>
-        <meta name='revisit-after' content='1 days' />
-        <meta name='googlebot' content='index,follow'/>
-        <meta name='distribution' content='global'/>
+		<meta name=googlebot content="all,index,follow">
+		<meta name=allow-search content="yes">
+		<meta name=audience content="all">
+  		<meta name="robots" content="index, follow"> 
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> 
         <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'/>
 
 
